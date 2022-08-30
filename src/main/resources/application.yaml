@@ -1,12 +1,10 @@
-db:
-  driver: org.postgresql.Driver
-  url: jdbc:postgresql://localhost:5432/playgrounds
-  user: dev
-  password: dev
-
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/playgrounds
     driver-class-name: org.postgresql.Driver
     username: dev
     password: dev
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create

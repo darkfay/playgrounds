@@ -1,0 +1,28 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<body>
+
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow" th:fragment="header">
+
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <a th:href="@{/}" class="nav-link px-3" href="#">Home</a>
+        </div>
+    </div>
+
+
+    <div class="navbar-nav">
+        <div class="navbar-nav" sec:authorize="${hasRole('USER')}">
+        <div class="nav-item text-nowrap">
+            <a th:href="@{/myReservations}" class="nav-link px-3" href="#">My reservations</a>
+        </div>
+    </div>
+
+    <div class="navbar-nav">
+        <div class="nav-item text-nowrap">
+            <a class="nav-link px-3" href="/logout">Sign out</a>
+        </div>
+    </div>
+</header>
+
+</body>
+</html>
